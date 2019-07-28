@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using PersonalInfoSampleApp.Model;
 
 namespace PersonalInfoSampleApp.Persistence
@@ -12,5 +13,10 @@ namespace PersonalInfoSampleApp.Persistence
 
         public DbSet<PersonalInfo> PersonalInfo { get; set; }
         public DbSet<City> City { get; set; }
+
+        public void Any()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

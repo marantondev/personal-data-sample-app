@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using PersonalInfoSampleApp.Model;
+using PersonalInfoSampleApp.Pages.Form.Handlers;
 using PersonalInfoSampleApp.Pages.Form.ViewModel;
 using PersonalInfoSampleApp.Persistence;
 
@@ -37,32 +37,9 @@ namespace PersonalInfoSampleApp.Pages.Form
                 return Page();
             }
 
-            _context.PersonalInfo.Add(new PersonalInfo()
-            {
-                FirstName = PersonalInfo.FirstName,
-                LastName = PersonalInfo.LastName,
-                DateOfBirth = PersonalInfo.DateOfBirth,
-                ResidenceAddress = GetAddressModel(PersonalInfo.ResidenceAddress),
-                UseSameAddress = PersonalInfo.UseSameAddress,
-                CorrespondenceAddress = GetAddressModel(PersonalInfo.ResidenceAddress)
-            });
-            await _context.SaveChangesAsync();
+            await new SubmitPersonalInfoCommandHandler(_context).Execute(PersonalInfo);
 
             return RedirectToPage("./Index");
-        }
-
-        private Address GetAddressModel(AddressViewModel viewModel)
-        {
-            if(viewModel is null)
-                return null;
-            else
-                return new Address()
-                {
-                    CityId = viewModel.CityId,
-                    Street = viewModel.Street,
-                    ResidenceNumber = viewModel.ResidenceNumber,
-                    PostalNumber = viewModel.PostalNumber
-                };
         }
     }
 }
