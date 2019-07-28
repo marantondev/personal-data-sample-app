@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalInfoSampleApp", "PersonalInfoSampleApp.csproj", "{46F08D6E-C87D-4804-8ECB-ABCF53705250}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalInfoSampleApp", "PersonalInfoSampleApp.csproj", "{46F08D6E-C87D-4804-8ECB-ABCF53705250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{2EB55C14-AD10-4CA9-8B4E-05C358B080D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "..\Model\Model.csproj", "{2EB55C14-AD10-4CA9-8B4E-05C358B080D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "..\Persistence\Persistence.csproj", "{9B09CE22-57A1-4FBC-88D0-5D74BEFE78A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "..\Persistence\Persistence.csproj", "{9B09CE22-57A1-4FBC-88D0-5D74BEFE78A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSeeder", "..\DatabaseSeeder\DatabaseSeeder.csproj", "{64E233B2-32BB-4777-BA12-275542FD595D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{9B09CE22-57A1-4FBC-88D0-5D74BEFE78A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B09CE22-57A1-4FBC-88D0-5D74BEFE78A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B09CE22-57A1-4FBC-88D0-5D74BEFE78A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E233B2-32BB-4777-BA12-275542FD595D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E233B2-32BB-4777-BA12-275542FD595D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E233B2-32BB-4777-BA12-275542FD595D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E233B2-32BB-4777-BA12-275542FD595D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

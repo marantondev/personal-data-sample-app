@@ -1,0 +1,207 @@
+[
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "Wrocław",
+   "CityName": "Wrocław"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Długołęka"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Kąty Wrocławskie"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Kobierzyce"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Siechnice"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Sobótka"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Czernica"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Żórawina"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Mietków"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "wrocławski",
+   "CityName": "Jordanów Śląski"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "Legnica",
+   "CityName": "Legnica"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "legnicki",
+   "CityName": "Chojnów"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "legnicki",
+   "CityName": "Prochowice"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "legnicki",
+   "CityName": "Miłkowice"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "legnicki",
+   "CityName": "Kunice"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "legnicki",
+   "CityName": "Legnickie Pole"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "legnicki",
+   "CityName": "Krotoszyce"
+ },
+ {
+   "Voivodeship": "dolnośląskie",
+   "Powiat": "legnicki",
+   "CityName": "Ruja"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "Poznań",
+   "CityName": "Poznań"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Luboń"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Puszczykowo"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Buk"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Kostrzyn"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Kórnik"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Mosina"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Murowana Goślina"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Pobiedziska"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Stęszew"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Swarzędz"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Czerwonak"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Dopiewo"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Kleszczewo"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Komorniki"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Rokietnica"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Suchy Las"
+ },
+ {
+   "Voivodeship": "wielkopolskie",
+   "Powiat": "poznański",
+   "CityName": "Tarnowo Podgórne"
+ },
+ {
+   "Voivodeship": "opolskie",
+   "Powiat": "Opole",
+   "CityName": "Opole"
+ },
+ {
+   "Voivodeship": "śląskie",
+   "Powiat": "Gliwicki",
+   "CityName": "Knurów"
+ },
+ {
+   "Voivodeship": "śląskie",
+   "Powiat": "Gliwicki",
+   "CityName": "Pyskowice"
+ },
+ {
+   "Voivodeship": "śląskie",
+   "Powiat": "Gliwicki",
+   "CityName": "Sośnicowice"
+ },
+ {
+   "Voivodeship": "śląskie",
+   "Powiat": "Gliwicki",
+   "CityName": "Toszek"
+ }
+]
