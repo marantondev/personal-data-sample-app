@@ -1,10 +1,10 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PersonalInfoSampleApp.Model;
 
 namespace PersonalInfoSampleApp.Persistence
 {
-    public class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext, IDatabaseContext
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
         : base(options)
@@ -14,9 +14,14 @@ namespace PersonalInfoSampleApp.Persistence
         public DbSet<PersonalInfo> PersonalInfo { get; set; }
         public DbSet<City> City { get; set; }
 
-        public void Any()
+        public Address GetAddressById(int id)
         {
-            throw new NotImplementedException();
+            return Find<Address>(id);
+        }
+
+        async Task<int> IDatabaseContext.SaveChangesAsync()
+        {
+            return await base.SaveChangesAsync();
         }
     }
 }

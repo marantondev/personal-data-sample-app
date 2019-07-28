@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "..\Model\Model.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "..\Persistence\Persistence.csproj", "{9B09CE22-57A1-4FBC-88D0-5D74BEFE78A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSeeder", "..\DatabaseSeeder\DatabaseSeeder.csproj", "{64E233B2-32BB-4777-BA12-275542FD595D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseSeeder", "..\DatabaseSeeder\DatabaseSeeder.csproj", "{64E233B2-32BB-4777-BA12-275542FD595D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{FA90E331-F702-4DC3-9750-5051045F670E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{64E233B2-32BB-4777-BA12-275542FD595D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E233B2-32BB-4777-BA12-275542FD595D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64E233B2-32BB-4777-BA12-275542FD595D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA90E331-F702-4DC3-9750-5051045F670E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA90E331-F702-4DC3-9750-5051045F670E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA90E331-F702-4DC3-9750-5051045F670E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA90E331-F702-4DC3-9750-5051045F670E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

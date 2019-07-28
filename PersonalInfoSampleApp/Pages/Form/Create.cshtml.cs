@@ -13,10 +13,12 @@ namespace PersonalInfoSampleApp.Pages.Form
     public class CreateModel : PageModel
     {
         private readonly DatabaseContext _context;
+        private readonly SubmitPersonalInfoCommandHandler _submitCommandHandler;
 
-        public CreateModel(DatabaseContext context)
+        public CreateModel(DatabaseContext context, SubmitPersonalInfoCommandHandler submitCommandHandler)
         {
             _context = context;
+            _submitCommandHandler = submitCommandHandler;
         }
 
         [BindProperty]
@@ -37,9 +39,9 @@ namespace PersonalInfoSampleApp.Pages.Form
                 return Page();
             }
 
-            await new SubmitPersonalInfoCommandHandler(_context).Execute(PersonalInfo);
+            await _submitCommandHandler.Execute(PersonalInfo);
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Index");
         }
     }
 }
