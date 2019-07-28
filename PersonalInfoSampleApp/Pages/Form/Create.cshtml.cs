@@ -12,12 +12,12 @@ namespace PersonalInfoSampleApp.Pages.Form
 {
     public class CreateModel : PageModel
     {
-        private readonly DatabaseContext _context;
+        private readonly GetCityListQueryHandler _getCitiesQuery;
         private readonly SubmitPersonalInfoCommandHandler _submitCommandHandler;
 
-        public CreateModel(DatabaseContext context, SubmitPersonalInfoCommandHandler submitCommandHandler)
+        public CreateModel(GetCityListQueryHandler getCitiesQuery, SubmitPersonalInfoCommandHandler submitCommandHandler)
         {
-            _context = context;
+            _getCitiesQuery = getCitiesQuery;
             _submitCommandHandler = submitCommandHandler;
         }
 
@@ -28,7 +28,7 @@ namespace PersonalInfoSampleApp.Pages.Form
 
         public IActionResult OnGet()
         {
-            Cities = _context.City.Select(p => new SelectListItem(p.CityName, p.Id.ToString())).OrderBy(p=>p.Text).ToList();
+            Cities = _getCitiesQuery.Execute();
             return Page();
         }
 

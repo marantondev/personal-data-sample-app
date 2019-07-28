@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Moq;
 using NUnit.Framework;
 using PersonalInfoSampleApp.Model;
 using PersonalInfoSampleApp.Persistence;

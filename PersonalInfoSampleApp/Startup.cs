@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using PersonalInfoSampleApp.Persistence;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using PersonalInfoSampleApp.Pages.Form.Handlers;
+using PersonalInfoSampleApp.Repositories;
 
 namespace PersonalInfoSampleApp
 {
@@ -55,7 +57,11 @@ namespace PersonalInfoSampleApp
                 p.SupportedUICultures = cultures;
             });
 
-            services.AddDbContext<DatabaseContext>(options =>
+            services.AddTransient<IPersonalInfoRepository, PersonalInfoRepository>();
+            services.AddTransient<SubmitPersonalInfoCommandHandler>();
+            services.AddTransient<GetCityListQueryHandler>();
+
+            services.AddDbContext<IDatabaseContext, DatabaseContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PersonalInfoSampleAppContext")));
         }
 
