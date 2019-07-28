@@ -1,13 +1,14 @@
 ﻿@page
 @model PersonalInfoSampleApp.Pages.Form.CreateModel
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<IndexModel> Localizer
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = @Localizer["FormCreate"];
 }
 
-<h1>Create</h1>
+<h1>@Localizer["InputData"]</h1>
 
-<h4>PersonalInfo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -88,7 +89,8 @@
         </form>
     </div>
 </div>
-<script>function setEnabled(checkedValue, targetElement) {
+<script>
+    function setEnabled(checkedValue, targetElement) {
         targetElement.setAttribute("test", "test");
         if (checkedValue)
             targetElement.setAttribute("disabled", checkedValue);
@@ -97,7 +99,7 @@
     }</script>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">@Localizer["BackToIndex"]</a>
 </div>
 
 @section Scripts {
