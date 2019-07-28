@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using PersonalInfoSampleApp.Persistence;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace PersonalInfoSampleApp
 {
@@ -33,8 +35,25 @@ namespace PersonalInfoSampleApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddLocalization(p => p.ResourcesPath = "Resources");
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddDataAnnotationsLocalization()
+                .AddViewLocalization();
+
+            services.Configure<RequestLocalizationOptions>(p =>
+            {
+                var cultures = new List<CultureInfo>()
+                {
+                    new CultureInfo("pl-PL")
+                };
+
+                p.DefaultRequestCulture = new RequestCulture("pl-PL");
+                p.SupportedCultures = cultures;
+                p.SupportedUICultures = cultures;
+            });
 
             services.AddDbContext<DatabaseContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PersonalInfoSampleAppContext")));
@@ -56,6 +75,8 @@ namespace PersonalInfoSampleApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            app.UseRequestLocalization();
 
             app.UseMvc();
         }

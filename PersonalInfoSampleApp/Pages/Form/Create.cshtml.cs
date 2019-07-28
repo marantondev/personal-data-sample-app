@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +25,7 @@ namespace PersonalInfoSampleApp.Pages.Form
 
         public IActionResult OnGet()
         {
-            Cities = _context.City.Select(p => new SelectListItem(p.CityName, p.Id.ToString())).ToList().OrderBy(p=>p.Text, StringComparer.CurrentCulture).ToList();
+            Cities = _context.City.Select(p => new SelectListItem(p.CityName, p.Id.ToString())).OrderBy(p=>p.Text).ToList();
             return Page();
         }
 
