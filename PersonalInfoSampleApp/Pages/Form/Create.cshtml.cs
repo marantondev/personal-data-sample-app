@@ -19,17 +19,20 @@ namespace PersonalInfoSampleApp.Pages.Form
             _context = context;
         }
 
-        public IActionResult OnGet()
-        {
-            return Page();
-        }
-
         [BindProperty]
         public PersonalInfo PersonalInfo { get; set; }
 
+        public List<SelectListItem> Cities { get; private set; }
+
+        public IActionResult OnGet()
+        {
+            Cities = _context.City.Select(p => new SelectListItem(p.CityName, p.Id.ToString())).ToList().OrderBy(p=>p.Text, StringComparer.CurrentCulture).ToList();
+            return Page();
+        }
+
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            if(!ModelState.IsValid)
             {
                 return Page();
             }
