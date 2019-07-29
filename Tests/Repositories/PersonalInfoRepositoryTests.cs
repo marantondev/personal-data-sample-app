@@ -116,8 +116,9 @@ namespace PersonalInfoSampleApp.Tests.Repositories
             }
             private IDatabaseContext CreateDatabase()
             {
+                //Appending a Guid to the name ensures we get a fresh database for every test
                 var dbOptions = new DbContextOptionsBuilder<DatabaseContext>()
-                    .UseInMemoryDatabase("PersonalInfoTest"+Guid.NewGuid()).Options;
+                    .UseInMemoryDatabase("PersonalInfoTest"+Guid.NewGuid().ToString()).Options;
                 var db = new DatabaseContext(dbOptions);
                 db.PersonalInfo.Add(DuplicateInfo);
                 db.SaveChanges();
