@@ -53,9 +53,9 @@ namespace PersonalInfoSampleApp
                 p.SupportedUICultures = cultures;
             });
 
-            services.AddTransient<IPersonalInfoRepository, PersonalInfoRepository>();
-            services.AddTransient<ISubmitPersonalInfoCommandHandler, SubmitPersonalInfoCommandHandler>();
-            services.AddTransient<IGetCityListQueryHandler, GetCityListQueryHandler>();
+            services.AddScoped<IPersonalInfoRepository, PersonalInfoRepository>();
+            services.AddScoped<ISubmitPersonalInfoCommandHandler, SubmitPersonalInfoCommandHandler>();
+            services.AddScoped<IGetCityListQueryHandler, GetCityListQueryHandler>();
 
             services.AddDbContext<IDatabaseContext, DatabaseContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PersonalInfoSampleAppContext")));
