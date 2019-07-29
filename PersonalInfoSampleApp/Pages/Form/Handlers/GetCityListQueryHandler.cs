@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace PersonalInfoSampleApp.Pages.Form.Handlers
 {
-    public class GetCityListQueryHandler
+    public class GetCityListQueryHandler : IGetCityListQueryHandler
     {
         private readonly IDatabaseContext _context;
         public GetCityListQueryHandler(IDatabaseContext context)

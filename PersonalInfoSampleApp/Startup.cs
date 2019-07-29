@@ -54,8 +54,8 @@ namespace PersonalInfoSampleApp
             });
 
             services.AddTransient<IPersonalInfoRepository, PersonalInfoRepository>();
-            services.AddTransient<SubmitPersonalInfoCommandHandler>();
-            services.AddTransient<GetCityListQueryHandler>();
+            services.AddTransient<ISubmitPersonalInfoCommandHandler, SubmitPersonalInfoCommandHandler>();
+            services.AddTransient<IGetCityListQueryHandler, GetCityListQueryHandler>();
 
             services.AddDbContext<IDatabaseContext, DatabaseContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PersonalInfoSampleAppContext")));

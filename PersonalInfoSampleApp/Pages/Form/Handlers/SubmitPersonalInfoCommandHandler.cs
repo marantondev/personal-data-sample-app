@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PersonalInfoSampleApp.Pages.Form.Handlers
 {
-    public sealed class SubmitPersonalInfoCommandHandler
+    public sealed class SubmitPersonalInfoCommandHandler : ISubmitPersonalInfoCommandHandler
     {
         private readonly IPersonalInfoRepository _repository;
 

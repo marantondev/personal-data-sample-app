@@ -10,10 +10,12 @@ namespace PersonalInfoSampleApp.Pages.Form
 {
     public class CreateModel : PageModel
     {
-        private readonly GetCityListQueryHandler _getCitiesQuery;
-        private readonly SubmitPersonalInfoCommandHandler _submitCommandHandler;
+        private readonly IGetCityListQueryHandler _getCitiesQuery;
+        private readonly ISubmitPersonalInfoCommandHandler _submitCommandHandler;
 
-        public CreateModel(GetCityListQueryHandler getCitiesQuery, SubmitPersonalInfoCommandHandler submitCommandHandler)
+        public CreateModel(
+            IGetCityListQueryHandler getCitiesQuery,
+            ISubmitPersonalInfoCommandHandler submitCommandHandler)
         {
             _getCitiesQuery = getCitiesQuery;
             _submitCommandHandler = submitCommandHandler;
