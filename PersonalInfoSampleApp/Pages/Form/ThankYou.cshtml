@@ -1,0 +1,13 @@
+﻿@page
+@model PersonalInfoSampleApp.Pages.Form.ThankYouModel
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<IndexModel> Localizer
+
+@{
+    ViewData["Title"] = @Localizer["ThankYou"];
+}
+
+<div class="text-center">
+    <h4>@Localizer["ThankYouMessage"]</h4>
+    <a asp-page="/Index">@Localizer["BackToIndex"]</a>
+</div>

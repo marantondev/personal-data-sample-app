@@ -29,8 +29,9 @@
                 <input asp-for="PersonalInfo.DateOfBirth" class="form-control" />
                 <span asp-validation-for="PersonalInfo.DateOfBirth" class="text-danger"></span>
             </div>
+            <hr />
             <fieldset id="@nameof(Model.PersonalInfo.ResidenceAddress)">
-                <label asp-for="PersonalInfo.ResidenceAddress" class="control-label"></label>
+                <label asp-for="PersonalInfo.ResidenceAddress" class="control-label lead"></label>
                 <div class="form-group">
                     <label asp-for="PersonalInfo.ResidenceAddress.Street" class="control-label"></label>
                     <input asp-for="PersonalInfo.ResidenceAddress.Street" class="form-control" />
@@ -52,16 +53,17 @@
                     <span asp-validation-for="PersonalInfo.ResidenceAddress.PostalNumber" class="text-danger"></span>
                 </div>
             </fieldset>
+            <hr />
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input"
                            asp-for="PersonalInfo.UseSameAddress"
-                           onchange="setEnabled(this.checked, @nameof(Model.PersonalInfo.CorrespondenceAddress))" />
+                           onchange="setEnabled(@nameof(Model.PersonalInfo.CorrespondenceAddress), this.checked)" />
                     @Html.DisplayNameFor(model => model.PersonalInfo.UseSameAddress)
                 </label>
             </div>
             <fieldset id="@nameof(Model.PersonalInfo.CorrespondenceAddress)">
-                <label asp-for="PersonalInfo.CorrespondenceAddress" class="control-label"></label>
+                <label asp-for="PersonalInfo.CorrespondenceAddress" class="control-label lead"></label>
                 <div class="form-group">
                     <label asp-for="PersonalInfo.CorrespondenceAddress.Street" class="control-label"></label>
                     <input asp-for="PersonalInfo.CorrespondenceAddress.Street" class="form-control" />
@@ -84,23 +86,25 @@
                 </div>
             </fieldset>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@Localizer["Submit"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+
+<div>
+    <a asp-page="/Index">@Localizer["BackToIndex"]</a>
+</div>
+
 <script>
-    function setEnabled(checkedValue, targetElement) {
+    function setEnabled(targetElement, checkedValue) {
         targetElement.setAttribute("test", "test");
         if (checkedValue)
             targetElement.setAttribute("disabled", checkedValue);
         else
             targetElement.removeAttribute("disabled");
-    }</script>
-
-<div>
-    <a asp-page="Index">@Localizer["BackToIndex"]</a>
-</div>
+    }
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

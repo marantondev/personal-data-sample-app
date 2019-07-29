@@ -18,9 +18,4 @@
     <ProjectReference Include="..\Persistence\Persistence.csproj" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="Resources\Pages\Shared\" />
-  </ItemGroup>
-
 </Project>
